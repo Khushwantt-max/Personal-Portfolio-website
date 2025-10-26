@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Khushwant Singh — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Khushwant Singh from Saharanpur, India. Projects, skills and contact." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#38bdf8; --muted:#94a3b8; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --max:1000px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Arial; background:linear-gradient(180deg,#071126 0%, #07132a 100%); color:#e6eef9;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; padding:30px; display:flex; justify-content:center;
+    }
+    .container{width:100%; max-width:var(--max);}
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:28px;
+    }
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#7dd3fc); display:flex; align-items:center; justify-content:center; color:#012; font-weight:700}
+    nav a{color:var(--muted); text-decoration:none; margin-left:18px}
+    nav a:hover{color:var(--accent)}
+
+    .grid{display:grid; grid-template-columns:1fr 360px; gap:28px; align-items:start}
+    @media (max-width:880px){ .grid{grid-template-columns:1fr; } header{flex-direction:column; align-items:flex-start} nav{margin-top:10px} }
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:22px; border-radius:var(--radius); box-shadow: 0 6px 18px rgba(2,6,23,0.6);}
+
+    .hero{display:flex; gap:18px; align-items:center}
+    .hero .text h1{margin:0; font-size:28px}
+    .hero .text p{color:var(--muted); margin:8px 0 0}
+
+    .about{margin-top:18px; color:var(--muted); line-height:1.6}
+
+    .skills{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .skill{background:var(--glass); padding:8px 12px; border-radius:999px; color:var(--muted); font-size:13px}
+
+    .projects{margin-top:18px; display:grid; gap:12px}
+    .project{display:flex; flex-direction:column; gap:8px; padding:14px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02))}
+    .project h3{margin:0}
+    .project p{margin:0; color:var(--muted); font-size:14px}
+
+    .side .card{position:sticky; top:30px}
+    .contact-form{display:flex; flex-direction:column; gap:8px}
+    input, textarea{background:transparent; border:1px solid rgba(255,255,255,0.06); color:inherit; padding:10px; border-radius:8px}
+    button{background:var(--accent); border:none; color:#012; padding:10px 14px; border-radius:10px; font-weight:600; cursor:pointer}
+
+    footer{margin-top:28px; color:var(--muted); text-align:center}
+
+    .small{font-size:13px; color:var(--muted)}
+    .project-links{display:flex; gap:8px; margin-top:6px}
+    .pill{font-size:12px; padding:6px 8px; border-radius:8px; background:rgba(255,255,255,0.02); color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">KS</div>
+        <div>
+          <div style="font-weight:700">Khushwant Singh</div>
+          <div class="small">BCA Student • Python & Web Enthusiast</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <!-- Main column -->
+      <section>
+        <div class="card hero">
+          <div class="text">
+            <h1>Hi — I'm <span style="color:var(--accent)">Khushwant Singh</span></h1>
+            <p>I build small web apps and scripts using Python, HTML, and CSS. I love solving problems and learning new things.</p>
+            <div class="skills">
+              <div class="skill">Python</div>
+              <div class="skill">HTML</div>
+              <div class="skill">CSS</div>
+              <div class="skill">JavaScript</div>
+              <div class="skill">APIs</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="about" class="card" style="margin-top:16px">
+          <h2 style="margin:0">About Me</h2>
+          <p class="about">I'm Khushwant Singh from Saharanpur, India — a BCA student learning web development and Python. This portfolio showcases small projects I built to practice programming and web design. I'm interested in internships where I can contribute and learn.</p>
+        </div>
+
+        <div id="projects" class="card projects">
+          <h2 style="margin:0 0 6px 0">Projects</h2>
+
+          <article class="project">
+            <h3>Weather App (Python)</h3>
+            <p>Simple app that fetches live weather using an open API. Demonstrates API calls and JSON parsing.</p>
+            <div class="project-links">
+              <span class="pill">Python</span>
+              <span class="pill">API</span>
+              <a href="#" style="color:var(--accent); text-decoration:none">View Code</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Calculator (Web)</h3>
+            <p>Responsive calculator built with HTML, CSS and JS. Practiced DOM and event handling.</p>
+            <div class="project-links">
+              <span class="pill">HTML</span>
+              <span class="pill">JavaScript</span>
+              <a href="#" style="color:var(--accent); text-decoration:none">Live Demo</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Student Management System</h3>
+            <p>Console-based Python app for storing student records in CSV. Shows CRUD operations and file handling.</p>
+            <div class="project-links">
+              <span class="pill">Python</span>
+              <span class="pill">CSV</span>
+              <a href="#" style="color:var(--accent); text-decoration:none">Repo</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Side column -->
+      <aside class="side">
+        <div class="card">
+          <h3>Contact</h3>
+          <p class="small">Feel free to email me or connect on GitHub/LinkedIn.</p>
+          <div style="margin-top:8px">
+            <div class="small">Email</div>
+            <div style="margin-bottom:8px">singhkhushwant020@gmail.com</div>
+            <div class="small">Location</div>
+            <div style="margin-bottom:8px">Saharanpur, India</div>
+          </div>
+
+          <div style="margin-top:12px">
+            <a href="mailto:singhkhushwant020@gmail.com" style="text-decoration:none"><button>Mail Me</button></a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h4>Quick Links</h4>
+          <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap">
+            <a href="#projects" class="pill">Projects</a>
+            <a href="#contact" class="pill">Contact</a>
+            <a href="#about" class="pill">About</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div style="margin-top:26px">Made with ❤️ • Khushwant Singh from Saharanpur, India • <span class="small">Save this file as <code>index.html</code> and open it in any browser.</span></div>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href');
+        if(id === '#') return;
+        const el = document.querySelector(id);
+        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
